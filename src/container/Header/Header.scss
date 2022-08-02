@@ -26,7 +26,7 @@
     padding-top: 8rem;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 900px) {
     flex-direction: row;
   }
 
@@ -76,6 +76,10 @@
       text-transform: uppercase;
       text-align: right;
     }
+
+    @media screen and (min-width: 900px) {
+      margin-right: 1rem;
+    }
   }
 
   span {
@@ -88,7 +92,8 @@
 
   @media screen and (min-width: 1200px) {
     justify-content: flex-start;
-    align-items: flex-start;
+    margin-right: 2rem;
+    // align-items: flex-start;
   }
 }
 
