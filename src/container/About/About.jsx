@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 import { images } from '../../constants';
 const abouts = [
   {
-    title: 'Frontend',
+    title: 'Frontend development',
     description: 'I am a good frontend engineer',
     imageUrl: images.about01,
   },
   {
-    title: 'Backend',
+    title: 'Backend Development',
     description: 'I am a good backend engineer',
     imageUrl: images.about02,
   },
@@ -19,22 +19,20 @@ const abouts = [
     imageUrl: images.about03,
   },
   {
-    title: 'Details',
-    description: 'I pay extra attention to details',
+    title: 'Ruby/Rails Stack',
+    description: 'Intermediate user of Ruby/Rails Stack',
     imageUrl: images.about04,
   },
 ];
 const About = () => {
   return (
-    <div>
+    <>
       <h2 className="head-text">
-        I know that
-        <span>Good Design</span>
-        means
-        <span>Good Business</span>
+        {' '}
+        I know that <span>Good Design</span> means <span>Good Business</span>{' '}
       </h2>
 
-      <div>
+      <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
@@ -53,8 +51,38 @@ const About = () => {
           </motion.div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
 export default About;
+
+// Frontend:
+
+// HTML (Jade)
+// CSS (SASS/LESS)
+// Javascript (Angular.js, jQuery, CoffeeScript, Backbone.js, React.js)
+// Database:
+
+// Postgresql 9.4
+// MongoDB
+// MySql
+// Backend:
+
+// Node.js
+// Ruby On Rails
+// PHP
+// Python
+// Tools:
+
+// GIT
+// GULP
+// ATOM
+// SUBLIME
+// AWS
+// HEROKU
+// SITEPRISM
+// Web Design:
+
+// Photoshop
+// Illustrator
