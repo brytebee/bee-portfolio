@@ -1,61 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import { images } from '../../constants';
+import { AppWrap } from '../../wrapper';
 import './About.scss';
 import { urlFor, client } from '../../client';
+import { images } from '../../constants';
 
-// const abouts = [
-//   {
-//     title: 'Frontend development',
-//     description: 'I am a good frontend engineer',
-//     imageUrl: images.about01,
-//   },
-//   {
-//     title: 'Backend Development',
-//     description: 'I am a good backend engineer',
-//     imageUrl: images.about02,
-//   },
-//   {
-//     title: 'Web designer',
-//     description: 'I possess great web design skills and taste',
-//     imageUrl: images.about03,
-//   },
-//   {
-//     title: 'Ruby/Rails Stack',
-//     description: 'Intermediate user of Ruby/Rails Stack',
-//     imageUrl: images.about04,
-//   },
-//   {
-//     title: 'Frontend development',
-//     description: 'I am a good frontend engineer',
-//     imageUrl: images.about01,
-//   },
-//   {
-//     title: 'Backend Development',
-//     description: 'I am a good backend engineer',
-//     imageUrl: images.about02,
-//   },
-//   {
-//     title: 'Web designer',
-//     description: 'I possess great web design skills and taste',
-//     imageUrl: images.about03,
-//   },
-//   {
-//     title: 'Ruby/Rails Stack',
-//     description: 'Intermediate user of Ruby/Rails Stack',
-//     imageUrl: images.about04,
-//   },
-// ];
+const abouts = [
+  {
+    title: 'Frontend development',
+    description: 'I am a good frontend engineer',
+    imgUrl: images.about01,
+  },
+  {
+    title: 'Backend Development',
+    description: 'I am a good backend engineer',
+    imgUrl: images.about02,
+  },
+  {
+    title: 'Web designer',
+    description: 'I possess great web design skills and taste',
+    imgUrl: images.about03,
+  },
+  {
+    title: 'Ruby/Rails Stack',
+    description: 'Intermediate user of Ruby/Rails Stack',
+    imgUrl: images.about04,
+  },
+];
 
 const About = () => {
-  const [abouts, setAbouts] = useState([]);
+  // const [abouts, setAbouts] = useState([]);
 
-  useEffect(() => {
-    const query = '*[_type == "abouts"]';
+  // useEffect(() => {
+  //   const query = '*[_type == "abouts"]';
 
-    client.fetch(query).then((data) => setAbouts(data));
-  }, []);
+  //   client.fetch(query).then((data) => setAbouts(data));
+  // }, []);
 
   return (
     <>
@@ -74,7 +55,8 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
+            {/* <img src={urlFor(about.imgUrl)} alt={about.title} /> */}
+            <img src={about.imgUrl} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
@@ -88,7 +70,7 @@ const About = () => {
   );
 };
 
-export default About;
+export default AppWrap(About, 'about');
 
 // Frontend:
 
