@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
+import './About.scss';
+
 const abouts = [
   {
     title: 'Frontend development',
@@ -29,7 +31,8 @@ const About = () => {
     <>
       <h2 className="head-text">
         {' '}
-        I know that <span>Good Design</span> means <span>Good Business</span>{' '}
+        I know that <span>Good Dev</span> <br /> means{' '}
+        <span>Good Business</span>{' '}
       </h2>
 
       <div className="app__profiles">
@@ -41,13 +44,13 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            {/* <img src={about.imageUrl} alt={about.title} />
+            <img src={about.imageUrl} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
             <p className="p-text" style={{ marginTop: 10 }}>
               {about.description}
-            </p> */}
+            </p>
           </motion.div>
         ))}
       </div>
