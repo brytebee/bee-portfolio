@@ -25,6 +25,26 @@ const abouts = [
     description: 'Intermediate user of Ruby/Rails Stack',
     imageUrl: images.about04,
   },
+  {
+    title: 'Frontend development',
+    description: 'I am a good frontend engineer',
+    imageUrl: images.about01,
+  },
+  {
+    title: 'Backend Development',
+    description: 'I am a good backend engineer',
+    imageUrl: images.about02,
+  },
+  {
+    title: 'Web designer',
+    description: 'I possess great web design skills and taste',
+    imageUrl: images.about03,
+  },
+  {
+    title: 'Ruby/Rails Stack',
+    description: 'Intermediate user of Ruby/Rails Stack',
+    imageUrl: images.about04,
+  },
 ];
 const About = () => {
   return (
