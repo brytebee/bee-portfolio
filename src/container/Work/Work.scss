@@ -39,6 +39,10 @@
     background-color: var(--secondary-color);
     color: #fff;
   }
+
+  @media screen and (min-width: 450px) {
+    justify-content: center;
+  }
 }
 
 .app__work-portfolio {
