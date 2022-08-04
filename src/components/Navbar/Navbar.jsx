@@ -14,12 +14,14 @@ const Navbar = () => {
         <img src={images.bright_logo} alt="logo" />
       </div>
       <ul className="app__navbar-links">
-        {['home', 'about', 'skills', 'work', 'contact'].map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
-            <div />
-            <a href={`#${item}`}>{item}</a>
-          </li>
-        ))}
+        {['home', 'about', 'works', 'skills', 'testimonials', 'contact'].map(
+          (item) => (
+            <li className="app__flex p-text" key={`link-${item}`}>
+              <div />
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          )
+        )}
       </ul>
 
       <div className="app__navbar-menu">
