@@ -1,6 +1,6 @@
-import { Navbar } from "./components";
-import { About, Footer, Header, Skills, Testimonials, Work } from "./container";
-import "./App.scss";
+import { Navbar } from './components';
+import { About, Footer, Header, Skills, Testimonials, Work } from './container';
+import './App.scss';
 
 const App = () => {
   return (
@@ -8,8 +8,8 @@ const App = () => {
       <Navbar />
       <Header />
       <About />
-      <Skills />
       <Work />
+      <Skills />
       <Testimonials />
       <Footer />
     </div>
