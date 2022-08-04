@@ -35,7 +35,7 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
-import bright from '../assets/bright.JPG';
+import bright from '../assets/bright.png';
 
 export default {
   email,
