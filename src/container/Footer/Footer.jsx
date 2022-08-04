@@ -21,23 +21,32 @@ const Footer = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const shouldSubmit = () => {
+    const check1 = formData.username !== '';
+    const check2 = formData.email !== '';
+    const check3 = formData.message !== '';
+    return check1 && check2 && check3;
+  };
+
   const handleSubmit = () => {
-    setLoading(true);
+    if (shouldSubmit()) {
+      setLoading(true);
 
-    const contact = {
-      _type: 'contact',
-      name: formData.username,
-      email: formData.email,
-      message: formData.message,
-    };
+      const contact = {
+        _type: 'contact',
+        name: formData.username,
+        email: formData.email,
+        message: formData.message,
+      };
 
-    client
-      .create(contact)
-      .then(() => {
-        setLoading(false);
-        setIsFormSubmitted(true);
-      })
-      .catch((err) => console.log(err));
+      client
+        .create(contact)
+        .then(() => {
+          setLoading(false);
+          setIsFormSubmitted(true);
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   return (
@@ -59,13 +68,14 @@ const Footer = () => {
         </div>
       </div>
       {!isFormSubmitted ? (
-        <div className="app__footer-form app__flex">
+        <form className="app__footer-form app__flex">
           <div className="app__flex">
             <input
               className="p-text"
               type="text"
               placeholder="Your Name"
               name="username"
+              required
               value={username}
               onChange={handleChangeInput}
             />
@@ -76,6 +86,7 @@ const Footer = () => {
               type="email"
               placeholder="Your Email"
               name="email"
+              required
               value={email}
               onChange={handleChangeInput}
             />
@@ -86,13 +97,14 @@ const Footer = () => {
               placeholder="Your Message"
               value={message}
               name="message"
+              required
               onChange={handleChangeInput}
             />
           </div>
           <button type="button" className="p-text" onClick={handleSubmit}>
             {!loading ? 'Send Message' : 'Sending...'}
           </button>
-        </div>
+        </form>
       ) : (
         <div>
           <h3 className="head-text">Thank you for getting in touch!</h3>
