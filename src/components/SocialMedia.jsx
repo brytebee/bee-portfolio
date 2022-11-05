@@ -14,25 +14,29 @@ const SocialMedia = () => {
   return (
     <div className="app__social">
       <div>
+        <a href={socials.linkedIn} target="_blank" rel="noopener noreferrer">
+          <BsLinkedin />
+        </a>
+      </div>
+      <div>
+        <a href={socials.github} target="_blank" rel="noopener noreferrer">
+          <FaGithub />
+        </a>
+      </div>
+      <div>
         <a href={socials.twitter} target="_blank" rel="noopener noreferrer">
           <BsTwitter />
         </a>
       </div>
       <div>
-        <a href={socials.twitter} target="_blank" rel="noopener noreferrer">
-          <BsGithub />
+        <a href={socials.instagram} target="_blank" rel="noopener noreferrer">
+          <BsInstagram />
         </a>
       </div>
       <div>
-        <a href={socials.twitter} target="_blank" rel="noopener noreferrer">
-          <BsTwitter />
+        <a href={socials.facebook} target="_blank" rel="noopener noreferrer">
+          <FaFacebookF />
         </a>
-      </div>
-      <div>
-        <FaFacebookF />
-      </div>
-      <div>
-        <BsInstagram />
       </div>
     </div>
   );
