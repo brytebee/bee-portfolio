@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-  BsLinkedin,
-  BsGithub,
-  BsTwitter,
-  BsInstagram,
-  BsFacebook,
-} from 'react-icons/bs';
-import { FaFacebookF } from 'react-icons/fa';
+import { BsLinkedin, BsTwitter, BsInstagram } from 'react-icons/bs';
+import { FaFacebookF, FaGithub } from 'react-icons/fa';
 
 const socials = {
   twitter: 'https://twitter.com/brytebee',
@@ -26,7 +20,7 @@ const SocialMedia = () => {
       </div>
       <div>
         <a href={socials.twitter} target="_blank" rel="noopener noreferrer">
-          <BsTwitter />
+          <BsGithub />
         </a>
       </div>
       <div>
